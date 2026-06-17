@@ -3,37 +3,37 @@ using namespace std;
 
 int main(){
     // Variable initialization
-    int a,b,op;
+    int num1,num2,operation;
 
     // Get data
     printf("Enter the first value: ");
-    scanf("%d", &a);
+    scanf("%d", &num1);
 
     printf("Enter the second value: ");
-    scanf("%d", &b);
+    scanf("%d", &num2);
     
     printf("\n[1] Addition\n[2] Substraction\n[3] Multiplication\n[4] Division\n[5] Percentage\n\nWhich operation do you want to do?: ");
-    scanf("%d", &op);
+    scanf("%d", &operation);
 
     // Enter the correct operation using switch
-    switch (op){
+    switch (operation){
     case 1:
-        printf("%d + %d = %d", a, b, a+b);
+        printf("%d + %d = %d", num1, num2, num1+num2);
         break;
 
     case 2:
-        printf("%d - %d = %d", a, b, a-b);
+        printf("%d - %d = %d", num1, num2, num1-num2);
         break;
 
     case 3:
-        printf("%d x %d = %d", a, b, a*b);
+        printf("%d x %d = %d", num1, num2, num1*num2);
         break;
 
     case 4:
         // We first verify that the denominator is not zero
-        if (b != 0){
-            float division = static_cast<float>(a)/b; // We convert one value of the division to float to return a float value
-            printf("%d / %d = %.2f", a, b, division);
+        if (num2 != 0){
+            float division = static_cast<float>(num1)/num2; // We convert one value of the division to float to return num1 float value
+            printf("%d / %d = %.2f", num1, num2, division);
             break;
         } else{
             printf("Cannot divide by 0."); 
@@ -41,11 +41,11 @@ int main(){
         }
 
     case 5:
-        printf("%d%% of %d = %.2f", a, b, (static_cast<float>(a)/100)*b);
+        printf("%d%% of %d = %.2f", num1, num2, (static_cast<float>(num1)/100)*num2);
         break;
     
     default:
-        printf("Enter a valid option.");
+        printf("Enter num1 valid option.");
     }
     return 0;
 }
