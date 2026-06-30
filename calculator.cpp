@@ -45,7 +45,7 @@ int main(){
         break;
     
     default:
-        printf("Enter num1 valid option.");
+        printf("Enter a valid option.");
     }
     return 0;
 }
