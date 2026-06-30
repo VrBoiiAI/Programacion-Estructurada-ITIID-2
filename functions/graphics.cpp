@@ -3,7 +3,8 @@
 using namespace std;
 
 float setup(int operatio=0, int upward_start=0, int upward_end=0, int peak=0, int downward_start=0, int downward_end=0){
-return 0;
+
+    return 0;
 }
 
 int main(){
