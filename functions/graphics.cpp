@@ -4,18 +4,13 @@ using namespace std;
 
 float x;
 
-float setup(int operatio=0, int upward_start=0, int upward_end=0, int peak=0, int downward_start=0, int downward_end=0){
-
-    return 0;
-}
-
 float triangular(int upward_start, int peak, int downward_end){
     // We verify that the function has coherent values
     if (upward_start < peak && peak < downward_end){
             printf("Enter the value of x to calculate: ");
             scanf("%f", &x);
 
-            // We get the value of x and evaluate its corresponding y value based on where on the graphic it its
+            // We get the value of x and evaluate its corresponding y value based on where on the graphic it is
             if (x <= upward_start) return 0;
             else if (x <= peak) return ((static_cast<float>(x)-upward_start)/(downward_end-peak));
             else if (x <= downward_end) return ((static_cast<float>(downward_end)-x)/(downward_end-peak));
@@ -31,7 +26,7 @@ float gamma(int upward_start, int upward_end){
             printf("Enter the value of x to calculate: ");
             scanf("%f", &x);
 
-            // We get the value of x and evaluate its corresponding y value based on where on the graphic it its
+            // We get the value of x and evaluate its corresponding y value based on where on the graphic it is
             if (x <= upward_start) return 0;
             else if (x < upward_end) return ((static_cast<float>(x)-upward_start)/(upward_end-upward_start));
             else return 1;
@@ -47,7 +42,7 @@ float trapezoidal(int upward_start, int upward_end, int downward_start, int down
             printf("Enter the value of x to calculate: ");
             scanf("%f", &x);
 
-            // We get the value of x and evaluate its corresponding y value based on where on the graphic it its
+            // We get the value of x and evaluate its corresponding y value based on where on the graphic it is
             if (x <= upward_start) return 0;
             else if (x <= upward_end) return ((static_cast<float>(x)-upward_start)/(upward_end-upward_start));
             else if (x <= downward_start) return 1;
@@ -63,7 +58,7 @@ float s(int upward_start=0, int upward_end=0){
             printf("Enter the value of x to calculate: ");
             scanf("%f", &x);
 
-            // We get the value of x and evaluate its corresponding y value based on where on the graphic it its
+            // We get the value of x and evaluate its corresponding y value based on where on the graphic it is
             if (x < upward_start) return 0;
             else if (x <= ((static_cast<float>(upward_start)+upward_end)/(2))) return (2*pow((((static_cast<float>(x)-upward_start))/(upward_end-upward_start)),2));
             else if (x <= upward_end) return (1-(2*pow((static_cast<float>(upward_end)-x)/(upward_end-upward_start),2)));
