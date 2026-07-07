@@ -15,6 +15,6 @@
 - **`graphics.py`:** Does the same as **`graphics.cpp`**, with the added function of drawing the function the user chooses using the NumPy and MatPlotLib libraries.
 
 
-### Functions folder
+## Functions folder
 A new version of every above program was made, now using functions instead of having everything in the main function.
 **`average.cpp`** and **`factorial.cpp`** use recursion to work.
