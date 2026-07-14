@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <iostream>
 #include <string>
 using namespace std;
 
@@ -13,8 +12,8 @@ int main(){
     int Document[] = {7, 10, 7, 7, 5, 9, 7, 7, 10, 7, 7, 5, 10, 5, 10, 5, 0, 10};
     float Exam[] = {7.5, 0, 2.5, 4, 0.5, 1.5, 2, 2, 3, 1, 1, 4, 1, 8, 9, 3.5};
     float Ordinary[] = {8.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7.7, 0, 0};
-    float Remedial[] = {NULL, 7.5, 8.5, 8.5, 7.5, 9, 7.5, 5, 7.5, 6, 5, 7.5, 7.5, NULL, 9, 9};
-    float Final[] = {8.1, 7.5, 8.5, 8.5, 7.5, 9, 7.5, NULL, 7.5, NULL, NULL, 7.5, 7.5, 7.7, 9, 9};
+    float Remedial[] = {0.0, 7.5, 8.5, 8.5, 7.5, 9, 7.5, 5, 7.5, 6, 5, 7.5, 7.5, 0.0, 9, 9};
+    float Final[] = {8.1, 7.5, 8.5, 8.5, 7.5, 9, 7.5, 0.0, 7.5, 0.0, 0.0, 7.5, 7.5, 7.7, 9, 9};
 
     printf("\t\tClass\tDoc\tExam\tOrd\tRem\tFinal\n");
     for (int i = 0; i < 16; i++) {
