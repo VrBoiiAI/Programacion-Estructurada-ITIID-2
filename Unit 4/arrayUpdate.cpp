@@ -3,6 +3,8 @@
 #include <string>
 using namespace std;
 
+// To do: Identificar si el arreglo esta lleno, comprobacion de espacios en blancos
+
 void arrayUpdate(int P, int& n, string Arr[], string newElement){
     int i = n;
     while (i >= P-1){
