@@ -15,10 +15,14 @@ int main(){
     float Remedial[] = {0.0, 7.5, 8.5, 8.5, 7.5, 9, 7.5, 5, 7.5, 6, 5, 7.5, 7.5, 0.0, 9, 9};
     float Final[] = {8.1, 7.5, 8.5, 8.5, 7.5, 9, 7.5, 0.0, 7.5, 0.0, 0.0, 7.5, 7.5, 7.7, 9, 9};
 
-    printf("\t\tClass\tDoc\tExam\tOrd\tRem\tFinal\n");
-    for (int i = 0; i < 16; i++) {
-        if(Last_Names[i].length() < 8)
+    printf("\t\tClass\tDoc\tExam\tOrd\tRem\tFinal\n"); // Print headers
+    for (int i = 0; i < 16; i++) { // For loop to iterate all students
+
+        if(Last_Names[i].length() < 8) // We check if the last name is too long, if so, we only print one tab to have all rows flush
+
+            // We print each student's name and grade in each grading parameter, along with their final grade and if they passed in ordinary of remedial period
             printf("%s\t\t%d\t%d\t%.1f\t%.1f\t%.1f\t%.1f\n", Last_Names[i].c_str(), Class[i], Document[i], Exam[i], Ordinary[i], Remedial[i], Final[i]);
+
         else 
             printf("%s\t%d\t%d\t%.1f\t%.1f\t%.1f\t%.1f\n", Last_Names[i].c_str(), Class[i], Document[i], Exam[i], Ordinary[i], Remedial[i], Final[i]);
     }
