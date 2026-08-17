@@ -18,12 +18,12 @@ int getDeclaredElements(string Arr[], int size){ // Returns the number of elemen
 }
 
 
-// Function to print arrays in the form [0, 1, 2, 3, 4], prints NULL if one elements is an empty string
-// If list=true instead prints the elements like:
+// Function to print arrays in the form [0, 1, 2, 3, 4], prints "NULL" if the element is an empty string
+// If list=true instead prints elements like:
 // [1] A
 // [2] B
+// [3] etc. does not print empty strings
 
-// etc. does not print empty strings
 void printVector(string Arr[], int len, bool list=false){
     if (!(list)){ // Check for list flag
         cout << "[";
@@ -108,51 +108,51 @@ int main(){
 
         switch (operation){ // Send user to selected operation. Clears screen and repeats if no valid option is selected. Terminates main function if user exits
             case 1:{ // [1] Add entry
-                string newElement;
-                int position;
+                string newElement; // Element to be inserted in ...
+                int position;      // index {position-1}
 
-                printf("Enter a car brand: ");
+                printf("Enter a car brand: "); // Get newElement
                 getline(cin >> ws, newElement);
 
-                printf("Enter the position to place '%s': ", newElement.c_str());
+                printf("Enter the position to place '%s': ", newElement.c_str()); // Get position
                 scanf("%d", &position);
                 clearScreen();
-                addEntry(position, Cars, newElement, arraySize);
+                addEntry(position, Cars, newElement, arraySize); // Add {newElement} in index {position-1} of array {Cars}
                 break;
             }
 
             case 2:{ // [2] Delete entry
-                int position;
+                int position; // Element in index {position-1} to be deleted
 
-                printVector(Cars, arraySize, true);
-                printf("Enter the position to delete: ");
+                printVector(Cars, arraySize, true); // Show array {Cars} in list form for the user to choose which element to delete
+                printf("Enter the position to delete: "); // Get position
                 scanf("%d", &position);
 
-                deleteEntry(position, Cars, arraySize);
+                deleteEntry(position, Cars, arraySize); // Remove element in index {position-1} of array {Cars}
                 clearScreen();
                 break;
             }
                 
             case 3:{ // [3] Edit entry
-                string newElement;
-                int position;
+                string newElement; // Element to be updated to in ...
+                int position;      // index {position-1}
 
-                printVector(Cars, arraySize, true);
-                printf("Enter the position to edit: ");
+                printVector(Cars, arraySize, true); // Show array {Cars} in list form for the user to choose which element to edit
+                printf("Enter the position to edit: "); // Get position
                 scanf("%d", &position);
 
-                printf("Enter the new element: ");
+                printf("Enter the new element: "); // Get new value
                 getline(cin >> ws, newElement);
 
-                editEntry(position, Cars, newElement);
+                editEntry(position, Cars, newElement); // Update element in index {position-1} of array {Cars} to {newElement}
                 clearScreen();
                 break;
             }
             case 4: // [4] Exit
-                return 0;
+                return 0; // Terminate program early
 
             default: // Invalid option
-                clearScreen();
+                clearScreen(); // Clear screen, show error message and show menu again
                 printf("Enter a valid option.\n");
                 break;
             }
